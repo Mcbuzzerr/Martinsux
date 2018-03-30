@@ -1,0 +1,27 @@
+<%= form_with(model: twiit, local: true) do |form| %>
+  <% if twiit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(twiit.errors.count, "error") %> prohibited this twiit from being saved:</h2>
+
+      <ul>
+      <% twiit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Title %>
+    <%= form.text_field :Title, id: :twiit_Title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Body %>
+    <%= form.text_area :Body, id: :twiit_Body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

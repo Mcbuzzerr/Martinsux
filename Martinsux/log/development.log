@@ -323,3 +323,170 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 18ms (Views: 15.9ms)
 
 
+Started GET "/index" for 127.0.0.1 at 2018-03-30 14:59:27 -0600
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.5) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.5) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (139.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (74.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTwiits (20180330205910)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "twiits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Title" varchar, "Body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180330205910"]]
+  [1m[35m (67.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-03-30 20:59:47.381265"], ["updated_at", "2018-03-30 20:59:47.381265"]]
+  [1m[35m (62.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/index" for 127.0.0.1 at 2018-03-30 14:59:50 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/twiits" for 127.0.0.1 at 2018-03-30 14:59:59 -0600
+Processing by TwiitsController#index as HTML
+  Rendering twiits/index.html.erb within layouts/application
+  [1m[36mTwiit Load (0.2ms)[0m  [1m[34mSELECT "twiits".* FROM "twiits"[0m
+  Rendered twiits/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 344ms (Views: 339.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/twiits/new" for 127.0.0.1 at 2018-03-30 15:00:03 -0600
+Processing by TwiitsController#new as HTML
+  Rendering twiits/new.html.erb within layouts/application
+  Rendered twiits/_form.html.erb (48.1ms)
+  Rendered twiits/new.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 90ms (Views: 77.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/twiits" for 127.0.0.1 at 2018-03-30 15:00:23 -0600
+Processing by TwiitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cH/tGEVilUgeUMsEDk5MZYumaLcf0SkLEkGKQbFidjhrTmSlMD2r9uotlPBZjs24/hSI6ZZbdjc2LfUnYnFHxQ==", "twiit"=>{"Title"=>"Hello Wrold", "Body"=>"Wii diid iit"}, "commit"=>"Create Twiit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "twiits" ("Title", "Body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["Title", "Hello Wrold"], ["Body", "Wii diid iit"], ["created_at", "2018-03-30 21:00:23.113918"], ["updated_at", "2018-03-30 21:00:23.113918"]]
+  [1m[35m (172.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/twiits/1
+Completed 302 Found in 177ms (ActiveRecord: 173.1ms)
+
+
+Started GET "/twiits/1" for 127.0.0.1 at 2018-03-30 15:00:23 -0600
+Processing by TwiitsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTwiit Load (0.2ms)[0m  [1m[34mSELECT  "twiits".* FROM "twiits" WHERE "twiits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering twiits/show.html.erb within layouts/application
+  Rendered twiits/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/twiits" for 127.0.0.1 at 2018-03-30 15:00:25 -0600
+Processing by TwiitsController#index as HTML
+  Rendering twiits/index.html.erb within layouts/application
+  [1m[36mTwiit Load (0.2ms)[0m  [1m[34mSELECT "twiits".* FROM "twiits"[0m
+  Rendered twiits/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/twiits/new" for 127.0.0.1 at 2018-03-30 15:01:51 -0600
+Processing by TwiitsController#new as HTML
+  Rendering twiits/new.html.erb within layouts/application
+  Rendered twiits/_form.html.erb (2.6ms)
+  Rendered twiits/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/twiits" for 127.0.0.1 at 2018-03-30 15:02:02 -0600
+Processing by TwiitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1cbmZNbA92r7pgZceAqaAJT06pE9yHnBA38K/XXx3T3O92/Zo5/J1A/bWagvyhvd4UYKz7RCJv0nE3WbpuLswA==", "twiit"=>{"Title"=>"tiiiiiitr", "Body"=>"poooooooobl"}, "commit"=>"Create Twiit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "twiits" ("Title", "Body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["Title", "tiiiiiitr"], ["Body", "poooooooobl"], ["created_at", "2018-03-30 21:02:02.704166"], ["updated_at", "2018-03-30 21:02:02.704166"]]
+  [1m[35m (179.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/twiits/2
+Completed 302 Found in 186ms (ActiveRecord: 180.4ms)
+
+
+Started GET "/twiits/2" for 127.0.0.1 at 2018-03-30 15:02:02 -0600
+Processing by TwiitsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTwiit Load (0.1ms)[0m  [1m[34mSELECT  "twiits".* FROM "twiits" WHERE "twiits"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering twiits/show.html.erb within layouts/application
+  Rendered twiits/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/twiits" for 127.0.0.1 at 2018-03-30 15:02:04 -0600
+Processing by TwiitsController#index as HTML
+  Rendering twiits/index.html.erb within layouts/application
+  [1m[36mTwiit Load (0.2ms)[0m  [1m[34mSELECT "twiits".* FROM "twiits"[0m
+  Rendered twiits/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
