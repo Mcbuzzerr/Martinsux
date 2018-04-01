@@ -490,3 +490,64 @@ Processing by TwiitsController#index as HTML
 Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-01 15:14:43 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 863ms (Views: 851.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/twiits" for 127.0.0.1 at 2018-04-01 15:14:56 -0600
+Processing by TwiitsController#index as HTML
+  Rendering twiits/index.html.erb within layouts/application
+  [1m[36mTwiit Load (0.5ms)[0m  [1m[34mSELECT "twiits".* FROM "twiits"[0m
+  Rendered twiits/index.html.erb within layouts/application (43.3ms)
+Completed 200 OK in 78ms (Views: 70.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/twiits/new" for 127.0.0.1 at 2018-04-01 15:15:00 -0600
+Processing by TwiitsController#new as HTML
+  Rendering twiits/new.html.erb within layouts/application
+  Rendered twiits/_form.html.erb (70.7ms)
+  Rendered twiits/new.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 131ms (Views: 127.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/twiits" for 127.0.0.1 at 2018-04-01 15:15:31 -0600
+Processing by TwiitsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rNCkayM1LQxbBxnZa0m/BcH8qgxWuPzckY9flD9x13DfeHIPH4Bq7MEYxh7oe8qio7KqQon4bSr0t4U+uZO4NA==", "twiit"=>{"Title"=>"I did a thing", "Body"=>"My end of the application is fixed (I reverted changes)"}, "commit"=>"Create Twiit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "twiits" ("Title", "Body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["Title", "I did a thing"], ["Body", "My end of the application is fixed (I reverted changes)"], ["created_at", "2018-04-01 21:15:31.607718"], ["updated_at", "2018-04-01 21:15:31.607718"]]
+  [1m[35m (23.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/twiits/3
+Completed 302 Found in 34ms (ActiveRecord: 25.7ms)
+
+
+Started GET "/twiits/3" for 127.0.0.1 at 2018-04-01 15:15:31 -0600
+Processing by TwiitsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTwiit Load (0.5ms)[0m  [1m[34mSELECT  "twiits".* FROM "twiits" WHERE "twiits"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twiits/show.html.erb within layouts/application
+  Rendered twiits/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 57ms (Views: 31.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/twiits" for 127.0.0.1 at 2018-04-01 15:15:36 -0600
+Processing by TwiitsController#index as HTML
+  Rendering twiits/index.html.erb within layouts/application
+  [1m[36mTwiit Load (0.4ms)[0m  [1m[34mSELECT "twiits".* FROM "twiits"[0m
+  Rendered twiits/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/twiits/3/edit" for 127.0.0.1 at 2018-04-01 15:15:39 -0600
+Processing by TwiitsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTwiit Load (0.3ms)[0m  [1m[34mSELECT  "twiits".* FROM "twiits" WHERE "twiits"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering twiits/edit.html.erb within layouts/application
+  Rendered twiits/_form.html.erb (4.8ms)
+  Rendered twiits/edit.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 105ms (Views: 100.4ms | ActiveRecord: 0.3ms)
+
+
