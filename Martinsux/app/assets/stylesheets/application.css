@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+.main {
+    height: -webkit-fill-available;
+    left: 0;
+    border: 15px solid #13100a;
+    background-color: #d011d0;
+    background-image: url("https://cdn.cnn.com/cnnnext/dam/assets/170606121226-japan---travel-destination---shutterstock-230107657.jpg")
+}
+body {
+    background-color: #ffffff;
+    margin: 0px;
+}
+.vert-cent {
+    height: 50%;
+}
