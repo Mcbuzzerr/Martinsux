@@ -692,3 +692,27 @@ Processing by TwiitsController#index as HTML
 Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-11 13:55:33 -0600
+Processing by TwiitsController#index as HTML
+  Rendering twiits/index.html.erb within layouts/application
+  [1m[36mTwiit Load (0.3ms)[0m  [1m[34mSELECT "twiits".* FROM "twiits"[0m
+  Rendered twiits/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-11 14:00:44 -0600
+Processing by TwiitsController#index as HTML
+  Rendering twiits/index.html.erb within layouts/application
+  [1m[36mTwiit Load (0.2ms)[0m  [1m[34mSELECT "twiits".* FROM "twiits"[0m
+  Rendered twiits/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-11 14:12:53 -0600
+Processing by TwiitsController#index as HTML
+  Rendering twiits/index.html.erb within layouts/application
+  [1m[36mTwiit Load (0.3ms)[0m  [1m[34mSELECT "twiits".* FROM "twiits"[0m
+  Rendered twiits/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.3ms)
+
+

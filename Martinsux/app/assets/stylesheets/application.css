@@ -27,3 +27,7 @@ body {
 .vert-cent {
     height: 50%;
 }
+.antihover:hover {
+	backface-visibility: none;
+	
+}
