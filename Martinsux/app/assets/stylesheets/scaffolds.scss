@@ -1,6 +1,6 @@
 body {
   background-color: #fff;
-  color: #333;
+  color: #999999;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -23,21 +23,22 @@ a {
   color: #000;
 
   &:visited {
-    color: #666;
+    color: #999999;
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #999999;
   }
 }
 
 th {
   padding-bottom: 5px;
+  color: #999999;
 }
 
 td {
   padding: 0 5px 7px;
+  color: #999999;
 }
 
 div {
@@ -70,12 +71,13 @@ div {
     font-size: 12px;
     margin: -7px -7px 0;
     background-color: #c00;
-    color: #fff;
+    color: #999999;
   }
 
   ul li {
     font-size: 12px;
     list-style: square;
+    color: #999999;
   }
 }
 
